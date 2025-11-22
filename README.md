@@ -157,4 +157,4 @@ python src/modeling/04_predict.py
 
 ### **Diego Ortiz - Analitics Engineer & Data Ops**
 
-[Link a tu LinkedIn] | [Link a tu Portafolio]
+[https://www.linkedin.com/in/diego-ortiz-0ab660256/]
