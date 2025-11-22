@@ -115,7 +115,7 @@ target_city:
 
 **Enlace para verlo en Tableau Public:** [https://public.tableau.com/app/profile/diego.ortiz3976/viz/Libro1_17637397482790/Dashboard1]
 
-![Dashboard 1.png](<attachment:Dashboard 1.png>)
+![Dashboard de Control - Alerta Temprana](assets/Dashboard1.jpg)
 
 ## **Stack Tecnológico**
 
