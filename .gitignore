@@ -1,0 +1,13 @@
+# Basura de Sistema
+.DS_Store
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+
+# Entornos Virtuales
+venv/
+.venv/
+env/
+
+# Datos
+# data/01_raw/

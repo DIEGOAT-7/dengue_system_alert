@@ -1,0 +1,28 @@
+# CONFIGURACIÓN DEL SISTEMA DE ALERTA TEMPRANA DE DENGUE
+# Cambia estos parámetros para ejecutar el modelo en una nueva ciudad.
+
+project:
+  name: "Dengue-Prediction-Model"
+  version: "1.0"
+
+target_city:
+  name: "CALI"
+  # Coordenadas para la API de Clima (Open-Meteo)
+  lat: 3.45
+  lon: -76.53
+
+data_sources:
+  sivigila:
+    dataset_id: "4hyg-wa9d"  # ID del dataset histórico en datos.gov.co
+    event_code: "210"        # 210 = Dengue, 220 = Dengue Grave (si se requiere)
+    event_name: "DENGUE"     # Para el filtro de texto
+  
+  climate:
+    start_date: "2016-01-01"
+    # Dejar end_date vacío o 'today' para que el script use la fecha actual
+    end_date: "today" 
+
+paths:
+  raw_data: "data/01_raw"
+  processed_data: "data/03_processed"
+  outputs: "data/04_output"

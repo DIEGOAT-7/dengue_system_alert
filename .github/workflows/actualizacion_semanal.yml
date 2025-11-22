@@ -1,0 +1,49 @@
+name: Actualización Semanal de Datos (Dengue)
+
+# 1. ¿CUÁNDO SE EJECUTA?
+on:
+  schedule:
+    # Cron: Se ejecuta cada Lunes a las 12:00 UTC (7:00 AM Colombia)
+    - cron: '0 12 * * 1'
+  workflow_dispatch: # ¡Esto te permite agregar un botón de "Run Now" manual!
+
+# 2. ¿QUÉ DEBE HACER?
+jobs:
+  run-data-pipeline:
+    runs-on: ubuntu-latest # Usamos un servidor Linux virtual
+
+    steps:
+      # A. Descargar tu repositorio en el servidor
+      - name: Clonar repositorio (Checkout)
+        uses: actions/checkout@v3
+
+      # B. Instalar Python
+      - name: Configurar Python 3.13.1
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.13.1'
+
+      # C. Instalar tus librerías
+      - name: Instalar dependencias
+        run: |
+          pip install -r requirements.txt
+
+      # D. Ejecutar tus scripts (¡Aquí ocurre la magia!)
+      - name: Ejecutar Extracción de Clima (01)
+        run: python src/data_engineering/01_get_climate_data.py
+
+      - name: Ejecutar Extracción de SIVIGILA (02)
+        run: python src/data_engineering/02_get_sivigila_data.py
+        
+      # NOTA: Aquí podríamos agregar el script 04 si tuvieras un script intermedio de limpieza.
+      # Por ahora, esto garantiza que tu repositorio siempre tenga los DATOS CRUDOS frescos.
+
+      # E. Guardar los cambios (Commit & Push)
+      # Si hubo datos nuevos, el robot los sube a tu repo automáticamente.
+      - name: Guardar y subir cambios
+        run: |
+          git config --global user.name 'GitHub Action Bot'
+          git config --global user.email 'action@github.com'
+          git add data/01_raw/*
+          # Solo hace commit si hay cambios, si no, no hace nada (evita errores)
+          git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 Auto-update: Nuevos datos semanales" && git push)
