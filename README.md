@@ -117,6 +117,9 @@ target_city:
 
 ![Dashboard de Control - Alerta Temprana](assets/Dashboard1.png)
 
+<img width="1678" height="1138" alt="Dashboard 1" src="https://github.com/user-attachments/assets/81c29c9d-017b-473a-b748-30e244ed7dad" />
+
+
 ## **Stack Tecnológico**
 
 - **Lenguaje:** Python 3.13.1
