@@ -156,7 +156,7 @@ python src/data_engineering/02_get_sivigila_data.py
 # Procesa, entrena y exporta el resultado para Tableau
 python src/modeling/04_predict.py
 
-## 👨‍💻 **Autor**:
+## **Autor**:
 
 ### **Diego Ortiz - Analitics Engineer & Data Ops**
 
