@@ -4,7 +4,7 @@
 
 **Framework de Machine Learning Escalable para la Vigilancia Epidemiológica del Dengue en Colombia**
 
-## **Resumen Ejecutivo** 📋
+## **Resumen Ejecutivo** 
 
 El Dengue es una enfermedad endémica que presiona cíclicamente los sistemas de salud en Colombia. La reacción tardía cuesta recursos y vidas.
 
