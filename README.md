@@ -75,7 +75,7 @@ El Sistema Nacional de Vigilancia (SIVIGILA) opera con dos tipos de datos:
 
 El dataset maestro oficial (`4hyg-wa9d`) utilizado en este proyecto contiene únicamente los datos **auditados**, los cuales tienen un rezago natural de publicación de 1-2 años por parte del Instituto Nacional de Salud.
 
-### 🔄 **Arquitectura "Future-Proof" (A prueba de futuro)**
+###  **Arquitectura "Future-Proof" (A prueba de futuro)**
 
 Este repositorio ha sido diseñado para resolver este problema automáticamente. No es un análisis estático, sino un pipeline vivo:
 
