@@ -87,7 +87,7 @@ humana.
 
 - **En el archivo 05_Experiment_Climate_Only.ipynb hice un experimento interesante prediciendo los casos de Dengue 2023 - 2025 usando Unicamente los datos climaticos de estos años, el experimento fue un exito demostrando que el modelo es preciso y funciona.**
 
-## 🌍 **Escalabilidad y Reproducibilidad (Multi-Ciudad)** 
+##  **Escalabilidad y Reproducibilidad (Multi-Ciudad)** 
 
 **Una de las fortalezas principales de este repositorio es su diseño modular. No está "hard-coded" para Cali.**
 
